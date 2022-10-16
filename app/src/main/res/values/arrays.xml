@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="device">
+        <item>摄像头</item>
+        <item>智能插座</item>
+        <item>电脑</item>
+        <item>空调</item>
+        <item>电灯</item>
+        <item>热水器</item>
+        <item>冰箱</item>
+    </string-array>
+    <string-array name="room">
+        <item>主卧</item>
+        <item>次卧</item>
+        <item>客厅</item>
+        <item>阳台</item>
+        <item>厨房</item>
+        <item>卫生间</item>
+        <item>小房间</item>
+    </string-array>
+</resources>

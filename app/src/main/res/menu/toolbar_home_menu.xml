@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home_add_device"
+        android:icon="@drawable/ic_add"
+        android:title="添加设备"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_home_refresh"
+        android:title="刷新"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_home_scan"
+        android:icon="@drawable/ic_search"
+        android:title="自动扫描"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_home_scan_qrcode"
+        android:title="扫码添加"
+        app:showAsAction="never"/>
+</menu>
