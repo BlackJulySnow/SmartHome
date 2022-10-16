@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+
+    <TableRow>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:labelFor="@+id/dialog_device_name"
+            android:text="设备名称" />
+
+        <EditText android:id="@+id/dialog_device_name" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:labelFor="@+id/dialog_device_ip"
+            android:text="IP地址" />
+
+        <EditText android:id="@+id/dialog_device_ip" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="房间" />
+
+        <Spinner
+            android:id="@+id/dialog_device_room"
+            android:entries="@array/room" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="设备类型" />
+
+        <Spinner
+            android:id="@+id/dialog_device_type"
+            android:entries="@array/device" />
+    </TableRow>
+
+</TableLayout>
