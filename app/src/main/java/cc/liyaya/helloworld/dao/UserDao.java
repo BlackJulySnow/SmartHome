@@ -7,6 +7,13 @@ import androidx.room.Query;
 import java.util.List;
 import cc.liyaya.helloworld.model.User;
 
+/*
+ *@ClassName UserDao
+ *@Description 用户的Dao层
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:43
+ *@Version 1.0
+ **/
 @Dao
 public interface UserDao {
     @Query("SELECT * FROM user")

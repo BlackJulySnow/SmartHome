@@ -9,6 +9,13 @@ import androidx.appcompat.widget.Toolbar;
 
 import cc.liyaya.helloworld.databinding.ActivityInfoBinding;
 
+/*
+ *@ClassName UserInfoActivity
+ *@Description 用户信息页面
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:49
+ *@Version 1.0
+ **/
 public class UserInfoActivity extends AppCompatActivity {
     private ActivityInfoBinding binding;
     @Override

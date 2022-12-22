@@ -22,6 +22,13 @@ import cc.liyaya.helloworld.ui.activity.MainActivity;
 import cc.liyaya.helloworld.databinding.FragmentCenterBinding;
 import cc.liyaya.helloworld.ui.activity.UserInfoActivity;
 
+/*
+ *@ClassName CenterFragment
+ *@Description 个人中心Fragment页面
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:49
+ *@Version 1.0
+ **/
 public class CenterFragment extends Fragment {
 
     private FragmentCenterBinding binding;
@@ -47,6 +54,13 @@ public class CenterFragment extends Fragment {
         Log.e(TAG,"onDestroyView");
     }
 
+    /*
+     * @Author B1GGersnow
+     * @Date 17:51 2022/10/16
+     * @Description 配置个人中心Toolbar
+     * @Param []
+     * @return void
+     **/
     public void initMenu(){
 
 

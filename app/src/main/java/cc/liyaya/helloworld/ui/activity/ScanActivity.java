@@ -27,6 +27,13 @@ import java.util.concurrent.ExecutionException;
 import cc.liyaya.helloworld.R;
 import cc.liyaya.helloworld.databinding.ActivityScanBinding;
 
+/*
+ *@ClassName ScanActivity
+ *@Description 扫码二维码页面
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:48
+ *@Version 1.0
+ **/
 public class ScanActivity extends AppCompatActivity implements View.OnClickListener {
     private String TAG = "ScanActivity";
     private ActivityScanBinding binding;
@@ -108,7 +115,13 @@ public class ScanActivity extends AppCompatActivity implements View.OnClickListe
             }
         }, getMainExecutor());
     }
-
+    /*
+     * @Author B1GGersnow
+     * @Date 17:48 2022/10/16
+     * @Description 绑定Preview
+     * @Param [cameraProvider]
+     * @return void
+     **/
     private void bindPreview(@NonNull ProcessCameraProvider cameraProvider) {
 
         Preview preview = new Preview.Builder()

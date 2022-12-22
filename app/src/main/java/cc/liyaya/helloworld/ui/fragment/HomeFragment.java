@@ -18,31 +18,33 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
-import androidx.camera.core.ImageCapture;
-import androidx.camera.core.ImageCaptureException;
 import androidx.core.view.MenuProvider;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.OrientationHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import com.google.mlkit.vision.barcode.BarcodeScannerOptions;
-import com.google.mlkit.vision.barcode.common.Barcode;
-
 import java.util.Date;
 import java.util.List;
 
 import cc.liyaya.helloworld.MyApplication;
 import cc.liyaya.helloworld.R;
+import cc.liyaya.helloworld.database.DatabaseUsage;
 import cc.liyaya.helloworld.ui.activity.MainActivity;
 import cc.liyaya.helloworld.adapter.DeviceAdapter;
 import cc.liyaya.helloworld.dao.DeviceDao;
-import cc.liyaya.helloworld.database.DeviceDatabase;
 import cc.liyaya.helloworld.databinding.FragmentHomeBinding;
 import cc.liyaya.helloworld.model.Device;
 import cc.liyaya.helloworld.ui.activity.ScanActivity;
 import cc.liyaya.helloworld.utils.TimeUtils;
 
+/*
+ *@ClassName HomeFragment
+ *@Description 查看家庭设备页面的HomeFragment配置
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:43
+ *@Version 1.0
+ **/
 public class HomeFragment extends Fragment{
 
     private FragmentHomeBinding binding;
@@ -56,7 +58,7 @@ public class HomeFragment extends Fragment{
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         recyclerView = binding.deviceRecycle;
-        deviceDao = DeviceDatabase.getInstance(getContext()).deviceDao();
+        deviceDao = DatabaseUsage.getInstance(getContext()).deviceDao();
 
         initMenu();
         initRecycleView();
@@ -75,6 +77,13 @@ public class HomeFragment extends Fragment{
         binding = null;
     }
 
+    /*
+     * @Author B1GGersnow
+     * @Date 17:41 2022/10/16
+     * @Description 初始化设备的RecycleView
+     * @Param []
+     * @return void
+     **/
     public void initRecycleView(){
         List<Device> list = deviceDao.getAll();
         //创建布局管理器，垂直设置LinearLayoutManager.VERTICAL，水平设置LinearLayoutManager.HORIZONTAL
@@ -88,9 +97,14 @@ public class HomeFragment extends Fragment{
     }
 
 
-
+    /*
+     * @Author B1GGersnow
+     * @Date 17:41 2022/10/16
+     * @Description 设置Home页面的Toolbar
+     * @Param []
+     * @return void
+     **/
     public void initMenu(){
-
         getActivity().addMenuProvider(new MenuProvider() {
             @Override
             public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {

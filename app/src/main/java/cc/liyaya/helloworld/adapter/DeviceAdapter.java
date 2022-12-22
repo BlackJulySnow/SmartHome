@@ -20,15 +20,22 @@ import cc.liyaya.helloworld.MyApplication;
 import cc.liyaya.helloworld.R;
 import cc.liyaya.helloworld.constant.IconEnum;
 import cc.liyaya.helloworld.dao.DeviceDao;
-import cc.liyaya.helloworld.database.DeviceDatabase;
+import cc.liyaya.helloworld.database.DatabaseUsage;
 import cc.liyaya.helloworld.model.Device;
 
+/*
+ *@ClassName DeviceAdapter
+ *@Description 设备的Adapter类
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:33
+ *@Version 1.0
+ **/
 public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.MyHolder> {
     private List<Device> devices;
     private DeviceDao deviceDao;
     public DeviceAdapter(List<Device> devices){
         this.devices = devices;
-        deviceDao = DeviceDatabase.getInstance(MyApplication.getContext()).deviceDao();
+        deviceDao = DatabaseUsage.getInstance(MyApplication.getContext()).deviceDao();
     }
 
     @Override
@@ -62,7 +69,7 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.MyHolder> 
                 holder.deviceShutdown.setBackgroundResource(R.drawable.ic_shutdown_red);
             }
             device.setStatus(!device.isStatus());
-            DeviceDatabase.getInstance(view.getContext()).deviceDao().update(device);
+            DatabaseUsage.getInstance(view.getContext()).deviceDao().update(device);
         });
         /*
          * 编辑功能
@@ -110,6 +117,13 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.MyHolder> 
 
     }
 
+    /*
+     * @Author B1GGersnow
+     * @Date 17:39 2022/10/16
+     * @Description 添加一个设备元素并且实现添加动画
+     * @Param [device] 
+     * @return void
+     **/
     public void append(Device device){
         devices.add(device);
         notifyItemInserted(devices.size());

@@ -10,6 +10,13 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+/*
+ *@ClassName WebGet
+ *@Description 从服务器获取数据
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:52
+ *@Version 1.0
+ **/
 public class WebGet extends Thread{
     private Context context;
     public WebGet(Context context) {

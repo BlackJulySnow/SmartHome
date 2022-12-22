@@ -4,6 +4,13 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+/*
+ *@ClassName User
+ *@Description 用户模型
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:46
+ *@Version 1.0
+ **/
 @Entity
 public class User {
     public int getUid() {

@@ -23,6 +23,13 @@ import cc.liyaya.helloworld.R;
 import cc.liyaya.helloworld.databinding.ActivityMainBinding;
 import cc.liyaya.helloworld.ui.WebGet;
 
+/*
+ *@ClassName MainActivity
+ *@Description 主Activity
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:47
+ *@Version 1.0
+ **/
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;

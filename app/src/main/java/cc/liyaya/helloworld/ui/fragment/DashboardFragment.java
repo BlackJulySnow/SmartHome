@@ -63,6 +63,13 @@ import cc.liyaya.helloworld.R;
 import cc.liyaya.helloworld.ui.activity.MainActivity;
 import cc.liyaya.helloworld.databinding.FragmentDashboardBinding;
 
+/*
+ *@ClassName DashboardFragment
+ *@Description 配置控制台Fragment页面
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:49
+ *@Version 1.0
+ **/
 public class DashboardFragment extends Fragment {
 
     private FragmentDashboardBinding binding;
@@ -87,7 +94,13 @@ public class DashboardFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
+    /*
+     * @Author B1GGersnow
+     * @Date 17:50 2022/10/16
+     * @Description 配置控制台Toolbar
+     * @Param []
+     * @return void
+     **/
     public void initMenu() {
         getActivity().addMenuProvider(new MenuProvider() {
             @Override

@@ -6,6 +6,13 @@ import androidx.room.PrimaryKey;
 
 import java.time.LocalDateTime;
 
+/*
+ *@ClassName Device
+ *@Description 设备模型
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:46
+ *@Version 1.0
+ **/
 @Entity
 public class Device {
     @PrimaryKey(autoGenerate = true)

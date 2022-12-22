@@ -5,9 +5,16 @@ import android.content.Context;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import cc.liyaya.helloworld.database.DeviceDatabase;
+import cc.liyaya.helloworld.database.DatabaseUsage;
 import cc.liyaya.helloworld.model.Device;
 
+/*
+ *@ClassName Insert
+ *@Description 插入设备线程
+ *@Author B1GGersnow
+ *@Date 2022/10/16 17:47
+ *@Version 1.0
+ **/
 public class Insert extends Thread{
     private Context context;
     public Insert(Context context){
@@ -43,7 +50,7 @@ public class Insert extends Thread{
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         device.setTime(dtf.format(LocalDateTime.now()));
         device.setType((int) (Math.random() * 1000) % 5);
-        DeviceDatabase.getInstance(context).deviceDao().insert(device);
+        DatabaseUsage.getInstance(context).deviceDao().insert(device);
 
 //        User user=new User();
 //        user.setFirstName(String.valueOf(Math.random()));
